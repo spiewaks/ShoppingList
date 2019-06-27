@@ -1,0 +1,20 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}ShoppingListBundle:allergens:removeAllergen{% endblock %}
+
+{% block body %}
+<h1></h1>
+    <form method="post" action="/removeAllergen">
+        <table>
+            <tr>
+                <th>Wybierz alergen, który chcesz usunąć : </th>
+                <td><input type="text" name="name" placeholder="nazwa"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="Usuń alergen z bazy">
+            </tr>
+        </table>
+
+    </form>
+{% endblock %}
