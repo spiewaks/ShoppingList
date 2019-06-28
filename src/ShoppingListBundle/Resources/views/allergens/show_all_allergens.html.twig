@@ -1,14 +1,13 @@
-{% extends "::base.html.twig" %}
+{% extends "base.html.twig" %}
 
 {% block title %}ShoppingListBundle:allergens:showAllAllergens{% endblock %}
 
 {% block body %}
-<a href="index.html.twig">Powrót do strony głównej</a>
-<h1>Lista allergenów</h1>
+<a href="/home"><img src="{{asset('bundles/shoppinglist/images/back.png') }}"width="200" height="150" title="Powrót na stronę główną"/></a>
+    <br>
     <div>
-        <a href="add_allergen.html.twig">Dodaj nowy alergen do bazy</a>
+    <a href="{{ path('addallergen')}}"><img src="{{asset('bundles/shoppinglist/images/alergeny.jpg')}}"width="590" height="300" title="Dodaj alergen do bazy"></a>
+        <a href="removeAllergen"><img src="{{asset('bundles/shoppinglist/images/usuwaniealergenow.jpg')}}"width="590" height="300" title="usun alergen z bazy"></a>
     </div>
-    <div>
-        <a href="remove_allergen.html.twig">Usuń alergen z bazy</a>
-    </div>
+    <h1>Lista allergenów</h1>
 {% endblock %}

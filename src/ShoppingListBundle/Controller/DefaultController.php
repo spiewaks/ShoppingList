@@ -7,16 +7,15 @@ use Symfony\Component\Routing\Annotation\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use ShoppingListBundle\Entity\allergens;
-
 
 class DefaultController extends Controller
 {
     /**
-     * @Route("/",name="homepage")
+     * @Route("/home",name="homepage")
+     * @Template("@ShoppingList/Default/index.html.twig")
      */
-    public function indexAction(Request $request)
+    public function indexAction()
     {
-        return $this->render('ShoppingListBundle:index.html.twig');
+        return [];
     }
 }

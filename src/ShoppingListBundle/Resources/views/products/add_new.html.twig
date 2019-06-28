@@ -1,29 +1,9 @@
-{% extends "::base.html.twig" %}
+{% extends "base.html.twig" %}
 
 {% block title %}ShoppingListBundle:products:addNew{% endblock %}
 
 {% block body %}
-
-<h1>Dodawanie nowego produktu do bazy danych</h1>
-    <a href="index.html.twig">Powrót do strony głównej</a>
-<a href="show_all.html.twig">Powrót do listy produktów</a>
-    <form>
-        <table>
-            <tr>
-            <th>Nazwa produktu, który ma zostać dodany do bazy :</th>
-            <td><input type="text" name="name" placeholder="nazwa"></td>
-            </tr>
-            <tr>
-                <th>Wybierz obraz z dysku :</th>
-                <td><input type="image" name="image" placeholder="obraz"></td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <input type="submit" value="Dodaj produkt do bazy">
-                </td>
-            </tr>
-
-        </table>
-
-    </form>
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    {{ form_end(form) }}
 {% endblock %}

@@ -3,6 +3,9 @@
 namespace ShoppingListBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
+use Symfony\Component\Routing\Annotation\Route;
+
 
 /**
  * Products
@@ -13,6 +16,22 @@ use Doctrine\ORM\Mapping as ORM;
 class Products
 {
     /**
+     * @ORM\ManyToOne(targetEntity="Categories", inversedBy="products")
+     */
+
+    private $category;
+    /**
+     * @ORM\JoinColumn(name="category_id", referencedColumnName="id")
+     * @ORM\ManyToMany(targetEntity="allergens", mappedBy="products")
+     */
+    private $allergens;
+    public function __construct()
+    {
+        $this->allergens = new ArrayCollection();
+    }
+
+    /**
+
      * @var int
      *
      * @ORM\Column(name="id", type="integer")

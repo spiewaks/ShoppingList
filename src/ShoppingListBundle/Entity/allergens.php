@@ -3,7 +3,8 @@
 namespace ShoppingListBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-
+use Doctrine\Common\Collections\ArrayCollection;
+use Symfony\Component\Routing\Annotation\Route;
 /**
  * allergens
  *
@@ -12,6 +13,17 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class allergens
 {
+    /**
+     * @ORM\ManyToMany(targetEntity="Products", inversedBy="allergens")
+     * @ORM\JoinTable(name="allergens_products")
+     */
+    private $products;
+    public function __construct()
+    {
+        $this->products = new ArrayCollection();
+    }
+
+
     /**
      * @var int
      *

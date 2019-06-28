@@ -3,6 +3,7 @@
 namespace ShoppingListBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * Categories
@@ -12,6 +13,15 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Categories
 {
+    /**
+     * @ORM\OneToMany(targetEntity="Products", mappedBy="category")
+     */
+    private $products;
+    public function __construct()
+    {
+        $this->products = new ArrayCollection();
+    }
+
     /**
      * @var int
      *

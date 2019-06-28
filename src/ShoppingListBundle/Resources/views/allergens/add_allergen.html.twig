@@ -1,27 +1,11 @@
-{% extends "::base.html.twig" %}
+{% extends "base.html.twig" %}
 
 {% block title %}ListaZakupowBundle:Allergens:addAllergen{% endblock %}
 
 {% block body %}
-    <div>
-        <a href="show_all_allergens.html.twig">Powrót do listy alergenów</a>
-    </div>
-    <div>
-        <a href="index.html.twig">Powrót do strony głównej</a>
-    </div>
-    <h1>Dodawanie alergenu do bazy </h1>
-    <form method="POST" action="/addAllergens">
-        <table>
-            <tr>
-                <th>Nazwa Alergenu:</th>
-                <td><input type="text" name="name" placeholder="nazwa"></td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <input type="submit" value="Dodaj alergen">
-                </td>
-            </tr>
-        </table>
-    </form>
-
+    <a href="/home"><img src="{{asset('bundles/shoppinglist/images/back.png') }}"width="200" height="150" title="Powrót na stronę główną"/></a>
+    <a href="{{ path('backallergens')}}"><img src="{{asset('bundles/shoppinglist/images/pokazwszystkie.jpg')}}"width="200" height="150" title="Wroc do listy alergenow"></a>
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    {{ form_end(form) }}
 {% endblock %}

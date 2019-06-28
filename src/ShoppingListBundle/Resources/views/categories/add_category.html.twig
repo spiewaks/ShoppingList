@@ -1,32 +1,10 @@
-{% extends "::base.html.twig" %}
+{% extends "base.html.twig" %}
 
 {% block title %}ShoppingListBundle:categories:addCategory{% endblock %}
 
 {% block body %}
-    <a href="index.html.twig">Powrót do strony głównej</a>
-<h1>Dodawanie kategorii</h1>
-    <form method="post" action="/addCategory" >
-        <table>
-            <tr>
-                <th>Podaj nazwę kategorii, którą chcesz dodać do bazy</th>
-                <br>
-                <td><input type="text" name="name" placeholder="nazwa"></td>
-             </tr>
-            <tr>
-                <th>Wybierz z dysku obraz, który będzie reprezentował nową kategorię</th>
-                <br>
-                <td><input type="image" name="image" placeholder="obraz"></td>
-            </tr>
-            <tr>
-                <th>Opisz jakiego rodzaju produkty będą znajdować się w nowej kategorii :</th>
-                <br>
-                <td> <input type="text" name="description" placeholder="opis"></td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <input type="submit" value="Dodaj kategorię do bazy">
-                </td>
-            </tr>
-        </table>
-    </form>
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    {{ form_end(form) }}
+
 {% endblock %}
