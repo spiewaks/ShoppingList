@@ -42,6 +42,7 @@ class allergensController extends Controller
     /**
      * @Route("/showAllAllergens", name="showAllAlergens")
      * @Route("/backToAllergens", name="backallergens")
+     * @Route("/showallalergensfromindex", name="showallallergensfromindex")
      * @Template("@ShoppingList/allergens/show_all_allergens.html.twig")
      */
     public function showAllAllergensAction()
@@ -56,6 +57,8 @@ class allergensController extends Controller
 
     /**
      * @Route("/removeAllergen/{id}", name="removeAllergen", methods={"POST"})
+     * @Route("/removeAllergen", name="removeA")
+
      * @Template("@ShoppingList/allergens/remove_allergen.html.twig")
      */
     public function removeAllergenAction($id)

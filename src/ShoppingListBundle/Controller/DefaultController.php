@@ -11,7 +11,7 @@ use Symfony\Component\HttpFoundation\Response;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/home",name="homepage")
+     * @Route("/",name="home")
      * @Template("@ShoppingList/Default/index.html.twig")
      */
     public function indexAction()

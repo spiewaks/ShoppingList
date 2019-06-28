@@ -3,7 +3,7 @@
 {% block title %}ListaZakupowBundle:Allergens:addAllergen{% endblock %}
 
 {% block body %}
-    <a href="/home"><img src="{{asset('bundles/shoppinglist/images/back.png') }}"width="200" height="150" title="Powrót na stronę główną"/></a>
+    <a href="{{ path('home') }}"><img src="{{asset('bundles/shoppinglist/images/back.png') }}"width="200" height="150" title="Powrót na stronę główną"/></a>
     <a href="{{ path('backallergens')}}"><img src="{{asset('bundles/shoppinglist/images/pokazwszystkie.jpg')}}"width="200" height="150" title="Wroc do listy alergenow"></a>
     {{ form_start(form) }}
     {{ form_widget(form) }}

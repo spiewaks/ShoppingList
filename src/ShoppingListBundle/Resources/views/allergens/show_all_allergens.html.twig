@@ -3,11 +3,10 @@
 {% block title %}ShoppingListBundle:allergens:showAllAllergens{% endblock %}
 
 {% block body %}
-<a href="/home"><img src="{{asset('bundles/shoppinglist/images/back.png') }}"width="200" height="150" title="Powrót na stronę główną"/></a>
+<a href="{{ path('home') }}"><img src="{{asset('bundles/shoppinglist/images/back.png') }}"width="200" height="150" title="Powrót na stronę główną"/></a>
     <br>
     <div>
     <a href="{{ path('addallergen')}}"><img src="{{asset('bundles/shoppinglist/images/alergeny.jpg')}}"width="590" height="300" title="Dodaj alergen do bazy"></a>
-        <a href="removeAllergen"><img src="{{asset('bundles/shoppinglist/images/usuwaniealergenow.jpg')}}"width="590" height="300" title="usun alergen z bazy"></a>
     </div>
     <h1>Lista allergenów</h1>
 {% endblock %}
